@@ -1,0 +1,239 @@
+body {
+  background: linear-gradient(135deg, #00c6ff 0%, #00bfff 25%, #0099ff 50%, #0072ff 75%, #0057cc 100%);
+  color: #002244;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 12px #0057cc88;
+}
+
+form {
+  margin-top: 20px;
+  padding: 32px 28px;
+  width: 420px;
+  border: 2px solid #0099ff;
+  border-radius: 18px;
+  background: rgba(0, 34, 68, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 51, 102, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  color: #e0eaff;
+  margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+input[type="email"] {
+  padding: 9px 12px;
+  border: 1.5px solid #0099ff;
+  border-radius: 6px;
+  background: #eaf6ff;
+  color: #002244;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus {
+  border: 1.5px solid #0057cc;
+  outline: none;
+}
+
+input[type="file"] {
+  padding: 7px 0;
+  border: none;
+  background: transparent;
+  color: #002244;
+  font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 18px;
+  margin-top: 2px;
+}
+
+input[type="radio"] {
+  accent-color: #0072ff;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0057cc33;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #00bfff 0%, #0072ff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.id-card {
+  margin: 36px auto 0 auto;
+  width: 340px;
+  min-height: 470px; /* Increased min-height for a taller card */
+  border-radius: 20px;
+  background: linear-gradient(120deg, #0099ff 0%, #0057cc 100%);
+  box-shadow: 0 8px 32px rgba(0, 51, 102, 0.25);
+  color: #fff;
+  padding: 70px 18px 60px 18px; /* Increased top and bottom padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; /* More space between sections */
+  border: 3px solid #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  animation: fadeIn 0.7s;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.id-card::before {
+  content: "STUDENT ID CARD";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 8px 0 6px 0;
+  border-radius: 18px 18px 0 0;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensure vertical centering */
+  gap: 10px;
+  border-bottom: none;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.card-photo {
+  display: block;
+  margin: 0 auto 6px auto; /* Center horizontally */
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: #eaf6ff33;
+  box-shadow: 0 2px 8px #0057cc33;
+}
+
+.card-name {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.card-title {
+  display: block;
+  margin: 4px auto 0 auto;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #eaf6ff;
+  background: rgba(0,198,255,0.18);
+  padding: 2px 14px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.05rem;
+  align-items: flex-start; /* Align content to the left */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card-body div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-body strong {
+  color: #111;
+  font-weight: 700;
+  text-decoration: underline;
+  min-width: 90px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
+  background: none;
+}
+
+.id-card::after {
+  content: "UNIVERSITY OF TALHA";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 7px 0 6px 0;
+  border-radius: 0 0 18px 18px;
+  opacity: 0.95;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
