@@ -46,7 +46,8 @@ label {
 input[type="text"],
 input[type="url"],
 input[type="date"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
   padding: 9px 12px;
   border: 1.5px solid #0099ff;
   border-radius: 6px;
@@ -59,7 +60,8 @@ input[type="email"] {
 input[type="text"]:focus,
 input[type="url"]:focus,
 input[type="date"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="password"]:focus {
   border: 1.5px solid #0057cc;
   outline: none;
 }
@@ -105,16 +107,16 @@ button[type="submit"]:hover {
 .id-card {
   margin: 36px auto 0 auto;
   width: 340px;
-  min-height: 470px; /* Increased min-height for a taller card */
+  min-height: 470px; 
   border-radius: 20px;
   background: linear-gradient(120deg, #0099ff 0%, #0057cc 100%);
   box-shadow: 0 8px 32px rgba(0, 51, 102, 0.25);
   color: #fff;
-  padding: 70px 18px 60px 18px; /* Increased top and bottom padding */
+  padding: 70px 18px 60px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px; /* More space between sections */
+  gap: 24px; 
   border: 3px solid #fff;
   font-family: 'Segoe UI', Arial, sans-serif;
   animation: fadeIn 0.7s;
@@ -145,7 +147,7 @@ button[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Ensure vertical centering */
+  justify-content: center; 
   gap: 10px;
   border-bottom: none;
   padding-bottom: 0;
@@ -154,7 +156,7 @@ button[type="submit"]:hover {
 
 .card-photo {
   display: block;
-  margin: 0 auto 6px auto; /* Center horizontally */
+  margin: 0 auto 6px auto; 
   width: 80px;
   height: 80px;
   object-fit: cover;
@@ -190,7 +192,7 @@ button[type="submit"]:hover {
   flex-direction: column;
   gap: 12px;
   font-size: 1.05rem;
-  align-items: flex-start; /* Align content to the left */
+  align-items: flex-start; 
   width: 100%;
   margin-top: 10px;
 }
@@ -236,4 +238,63 @@ button[type="submit"]:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px);}
   to { opacity: 1; transform: translateY(0);}
+}
+
+#auth-container {
+    width: 420px;
+    margin-top: 40px;
+}
+
+#login-container, #signup-container {
+  padding: 32px 28px;
+  border: 2px solid #0099ff;
+  border-radius: 18px;
+  background: rgba(0, 34, 68, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 51, 102, 0.18);
+  width: 490px;
+  margin-top: 40px;
+}
+
+
+#auth-container h1 {
+    text-align: center;
+    width: 100%; /* Ensure h1 takes full width for centering */
+}
+
+#auth-container p {
+    text-align: center;
+    margin-top: 20px;
+    color: #e0eaff;
+    width: 100%; /* Ensure p takes full width for centering */
+}
+
+#auth-container a {
+    color: #00c6ff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#auth-container a:hover {
+    text-decoration: underline;
+}
+
+#logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff416c 0%, #ff4b2b 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #ff416c33;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#logout-btn:hover {
+    background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
+    transform: translateY(-2px) scale(1.03);
 }
